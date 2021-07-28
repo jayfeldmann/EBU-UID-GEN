@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="proto-container">
+        <div class="proto"></div>
+        <div class="proto"></div>
+        <div class="proto"></div>
+        <div class="proto"></div>
+    </div>
+
+    <div class="container">
+        <div class="inner">
+            <div class="left">
+                <div class="content">
+                    <h1>Unique Source Identifier Generator</h1>
+
+                    <p>USID Generator for use in OriginatorReference from the Broadcast Wave Format</p>
+                    <p class="light">Based on <a href="https://tech.ebu.ch/docs/r/r099.pdf">EBU R 099</a></p>
+                </div>
+            </div>
+            <div class="right">
+                <p>USID</p>
+                <input type="text" name="countrycode" id="countrycode" placeholder="CC">
+                <input type="text" name="organisationcode" id="organisationcode" placeholder="OOO">
+                <input type="text" name="serialnumber" id="serialnumber" placeholder="NNNNNNNNNNNN">
+                <input type="text" name="organisationtime" id="organisationtime" placeholder="HHMMSS">
+                <input type="text" name="randomnumber" id="randomnumber" placeholder="RRRRRRRRR">
+                <button onclick="generadeUsid();populateCCDropdown()">Generate USID</button>
+                
+                <div class="usid" id="usid-out"></div>
+
+                
+
+            </div>
+        </div>
+    </div>   
+</body>
+
+<script src="js/main.js"></script>
+
+</html>
