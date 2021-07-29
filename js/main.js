@@ -4,9 +4,9 @@ function onPageLoad(){
     startTime();
 }
 
-function generateRandomNumberField(){
+function generateRandomNumberField(cnt){
     var s = "";
-    for (var index = 0; index < 9; index++) {
+    for (var index = 0; index < cnt; index++) {
         var rand = generateRandomNumber();
         s = s+rand;
     }
@@ -41,7 +41,12 @@ function generadeUsid() {
     var outLabel = document.getElementById("usid-out");
     var cc = document.getElementById("countrycode").value;
     var oc = document.getElementById("organisationcode").value;
-    var sn = document.getElementById("serialnumber").value;
+    var serial = document.getElementById("serialnumber");
+    var sn = serial.value;
+    if(sn.length === 0){
+        sn = generateRandomNumberField(12);
+        serial.value = sn;
+    }
     var ot = document.getElementById("organisationtime").value;
     var rn = document.getElementById("randomnumber").value;
     if(validateUsid(cc,oc,sn,ot,rn) === false) {
@@ -54,7 +59,7 @@ function generadeUsid() {
 
 function setRandomField(){
     var rn = document.getElementById("randomnumber");
-    var random = generateRandomNumberField();
+    var random = generateRandomNumberField(9);
     rn.value = random;
     return random;
 }
