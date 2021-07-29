@@ -90,6 +90,10 @@ function populateCCDropdown(){
         option.value = element.Code;
         sb.appendChild(option)
     });
+    var zzz = document.createElement("option");
+    zzz.text = "ZZ INTERNAL";
+    zzz.value = "ZZ";
+    sb.appendChild(zzz);
 }
 
 function readJSON(file) {
