@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body onload="onPageLoad()">
     <div class="proto-container">
         <div class="proto"></div>
         <div class="proto"></div>
@@ -27,11 +27,11 @@
             </div>
             <div class="right">
                 <p>USID</p>
-                <input type="text" name="countrycode" id="countrycode" placeholder="CC">
-                <input type="text" name="organisationcode" id="organisationcode" placeholder="OOO">
-                <input type="text" name="serialnumber" id="serialnumber" placeholder="NNNNNNNNNNNN">
-                <input type="text" name="organisationtime" id="organisationtime" placeholder="HHMMSS">
-                <input type="text" name="randomnumber" id="randomnumber" placeholder="RRRRRRRRR">
+                <select name="countrycode" id="countrycode"></select>
+                <input type="text" name="organisationcode" id="organisationcode" placeholder="OOO" size=3 maxlength=3>
+                <input type="text" name="serialnumber" id="serialnumber" placeholder="NNNNNNNNNNNN" size=13 maxlength=12>
+                <input type="text" name="organisationtime" id="organisationtime" placeholder="HHMMSS" disabled=true size=6 maxlength=6>
+                <input type="text" name="randomnumber" id="randomnumber" placeholder="RRRRRRRRR" disabled=true size=9 maxlength=9>
                 <button onclick="generadeUsid();populateCCDropdown()">Generate USID</button>
                 
                 <div class="usid" id="usid-out"></div>

@@ -29,6 +29,10 @@ body {
   color: white;
 }
 
+.container .right #countrycode {
+  width: 20ch;
+}
+
 .container .right p {
   margin: 2em 0 1em;
 }

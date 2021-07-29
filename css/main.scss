@@ -31,9 +31,14 @@ body{
     }
 
     .right{
+        #countrycode{
+            width: 20ch;
+        }
+
         p{
             margin: 2em 0 1em;
         }
+        
         .usid{
             margin: 1em;
         }
